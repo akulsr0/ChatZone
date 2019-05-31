@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/imgcont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ffuserdp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/seenstatus"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignRight="@id/ffuserdp"
+                    android:layout_alignBottom="@id/ffuserdp"
+                    />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/ffuserfullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgcont"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/cl"
+                android:textSize="15dp"
+                />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

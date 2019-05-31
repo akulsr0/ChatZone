@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/chatactivitytoolbar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:background="@drawable/bottomlayout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/CAbackbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backbutton"
+            android:layout_centerVertical="true"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/CAuserimage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/CAbackbutton"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/CAusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_alignTop="@id/CAuserimage"
+            android:layout_toRightOf="@id/CAuserimage"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/cl"
+            android:textSize="10dp"
+            />
+
+        <TextView
+            android:id="@+id/CAseenstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CAusername"
+            android:layout_toRightOf="@id/CAuserimage"
+            android:layout_marginLeft="10dp"
+            android:textSize="10dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/cl"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

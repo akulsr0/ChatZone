@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="5dp"
+    android:background="#EAF0F1"
+    >
+
+    <RelativeLayout
+        android:id="@+id/userLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Puserimg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="4dp"
+            />
+
+        <TextView
+            android:id="@+id/Pusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/re"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/Puserimg"
+            android:layout_marginLeft="6dp"
+            android:textColor="#B83227"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/postLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userLay"
+        >
+
+        <TextView
+            android:id="@+id/PpostTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/re"
+            />
+
+        <ImageView
+            android:id="@+id/PpostImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/PpostTitle"
+            android:scaleType="fitCenter"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FriendProfile"
+    >
+
+    <include
+        android:id="@+id/FPtoolbar"
+        layout="@layout/layout_toolbar_fp"/>
+
+    <RelativeLayout
+        android:id="@+id/fpimgcont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FPtoolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/FPuserprofileimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#B83227"
+            />
+
+        <ImageView
+            android:id="@+id/FPseenStatus"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@id/FPuserprofileimage"
+            android:layout_alignRight="@id/FPuserprofileimage"
+            />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/verifiedLogo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/done"
+        android:layout_toRightOf="@id/FPuserfullname"
+        android:layout_alignBottom="@id/FPuserfullname"
+        android:layout_below="@id/fpimgcont"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/FPuserfullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fpimgcont"
+        android:layout_centerHorizontal="true"
+        android:textColor="#B83227"
+        android:textSize="25dp"
+        android:fontFamily="@font/re"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/FPuserstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FPuserfullname"
+        android:layout_centerHorizontal="true"
+        android:textColor="#EC4849"
+        android:textSize="12dp"
+        android:fontFamily="@font/cl"
+        android:layout_marginTop="4dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/funfCont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FPuserstatus"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            android:id="@+id/FPfollowuser"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/followbutton"
+            android:layout_centerHorizontal="true"
+            android:onClick="followfriend"
+            />
+
+        <Button
+            android:id="@+id/FPfollowinguser"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@drawable/followingbutton"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:onClick="unfollowfriend"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/messageFriend"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:src="@drawable/messagebutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:onClick="messageUser"
+        android:layout_below="@id/funfCont"
+        />
+
+
+
+
+
+</RelativeLayout>

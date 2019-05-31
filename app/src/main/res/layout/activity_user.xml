@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout"
+        >
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include
+                    android:id="@+id/appbar"
+                    layout="@layout/layout_toolbar"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/appbar"
+                    >
+
+                    <FrameLayout
+                        android:id="@+id/mainFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                    </FrameLayout>
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/navigationView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/navLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/imgnamecontainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradientxml"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profileImageNavBar"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#B83227"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="40dp"
+                            />
+
+                        <ImageView
+                            android:id="@+id/seenstatusnavBar"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_alignRight="@id/profileImageNavBar"
+                            android:layout_alignBottom="@id/profileImageNavBar"
+                            />
+
+                        <TextView
+                            android:id="@+id/userfullnamenavbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/re"
+                            android:textColor="#ffffff"
+                            android:layout_below="@id/profileImageNavBar"
+                            android:layout_marginTop="10dp"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgnamecontainer"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/navHome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Home"
+                            android:textColor="#EA425C"
+                            android:fontFamily="@font/re"
+                            android:textSize="20dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/navProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Profile"
+                            android:textColor="#EA425C"
+                            android:fontFamily="@font/re"
+                            android:textSize="20dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_below="@id/navHome"
+                            />
+
+                        <TextView
+                            android:id="@+id/navFindFriends"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Find Friends"
+                            android:textColor="#EA425C"
+                            android:fontFamily="@font/re"
+                            android:textSize="20dp"
+                            android:layout_below="@id/navProfile"
+                            android:layout_marginTop="8dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/navFollowing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Following"
+                            android:textColor="#EA425C"
+                            android:fontFamily="@font/re"
+                            android:textSize="20dp"
+                            android:layout_below="@id/navFindFriends"
+                            android:layout_marginTop="8dp"
+                            android:onClick="FollowingFrag"
+                            />
+
+                        <TextView
+                            android:id="@+id/navFollowers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Followers"
+                            android:textColor="#EA425C"
+                            android:fontFamily="@font/re"
+                            android:textSize="20dp"
+                            android:layout_below="@id/navFollowing"
+                            android:layout_marginTop="8dp"
+                            android:onClick="FollowersFrag"
+                            />
+
+                        <TextView
+                            android:id="@+id/navLogout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Logout"
+                            android:textColor="#EA425C"
+                            android:fontFamily="@font/re"
+                            android:textSize="20dp"
+                            android:layout_below="@id/navFollowers"
+                            android:layout_marginTop="8dp"
+                            android:onClick="logoutuser"
+                            />
+
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+
+            </android.support.design.widget.NavigationView>
+
+        </android.support.v4.widget.DrawerLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bottomlayout"
+        android:layout_alignParentBottom="true"
+        >
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/homebutton"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:onClick="homeButton"
+            />
+
+        <Button
+            android:id="@+id/chatsfrag"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/chatsbutton"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/logout"
+            android:layout_marginLeft="10dp"
+            android:onClick="chatsfrag"
+            />
+
+        <Button
+            android:id="@+id/notifications"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/notification"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/chatsfrag"
+            android:layout_marginLeft="10dp"
+            android:onClick="notificationFrag"
+            />
+
+        <Button
+            android:id="@+id/menubutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/menubutton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:onClick="menuButton"
+            />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/profilebutton"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/menubutton"
+            android:layout_marginRight="10dp"
+            android:onClick="profileButton"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

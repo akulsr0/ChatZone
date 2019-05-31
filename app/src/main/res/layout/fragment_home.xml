@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/upperLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/togglepostlay"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/upbtn"
+                />
+
+            <TextView
+                android:id="@+id/layhelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click the button for a new post"
+                android:fontFamily="@font/cb"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#EA425C"
+                android:visibility="invisible"
+                />
+
+            <RelativeLayout
+                android:id="@+id/postContainer"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:background="@drawable/postlayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/postEditText"
+                    android:layout_width="220dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/postedittext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/re"
+                    android:textSize="10dp"
+                    android:gravity="top|left"
+                    android:hint="Share Something"
+                    />
+
+                <ImageView
+                    android:id="@+id/postGallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gallerybutton"
+                    android:layout_alignParentBottom="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/postbutton"
+                    android:layout_toRightOf="@id/postGallery"
+                    android:layout_alignParentBottom="true"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/upperLay"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="8dp"
+
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/postsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
