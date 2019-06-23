@@ -161,6 +161,7 @@ public class ChatActivity extends AppCompatActivity
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
+                    msgList.clear();
                     for(DataSnapshot chatSnap: dataSnapshot.getChildren()){
                         Message message = chatSnap.getValue(Message.class);
                         msgList.add(message);
@@ -178,6 +179,8 @@ public class ChatActivity extends AppCompatActivity
 
 
 
+
+
         msgviewref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
@@ -188,12 +191,14 @@ public class ChatActivity extends AppCompatActivity
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
+                            msgList.clear();
                             for(DataSnapshot chatSnap: dataSnapshot.getChildren()){
                                 Message message = chatSnap.getValue(Message.class);
                                 msgList.add(message);
                             }
                             adapter = new MessageAdapter(getApplicationContext(),msgList);
                             chatRecycler.setAdapter(adapter);
+
 
                         }
                     }
@@ -248,6 +253,7 @@ public class ChatActivity extends AppCompatActivity
 
             }
         });
+
 
 
     }

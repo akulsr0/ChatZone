@@ -103,6 +103,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.vholder>
         return userGetList.size();
     }
 
+
+    public void updateChat(){
+        notifyDataSetChanged();
+    }
+
     class vholder extends RecyclerView.ViewHolder{
 
         ImageView cfuserdp, cfseenstatus;

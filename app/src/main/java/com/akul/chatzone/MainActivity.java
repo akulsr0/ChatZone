@@ -94,7 +94,8 @@ public class MainActivity extends AppCompatActivity
                             userData.put("displayimage","null");
                             userData.put("seenstatus","null");
                             userData.put("uid",uid);
-
+                            userData.put("fullname",username);
+                            userData.put("displayimage","https://firebasestorage.googleapis.com/v0/b/chatzone-549a5.appspot.com/o/user.png?alt=media&token=e60f4b10-b7b0-422e-b70b-e259300a5699");
 
                             userReference.child(uid).setValue(userData);
 

@@ -66,6 +66,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.vholder>
         String uid = mAuth.getUid();
         FirebaseDatabase mdatabase = FirebaseDatabase.getInstance();
         DatabaseReference userref = mdatabase.getReference("Users/"+uid+"/");
+
         userref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
